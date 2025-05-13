@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div class="welcome-section">
+                <h1>Welcome, <span id="userName">User</span>!</h1>
+                <p id="currentDate"></p>
+            </div>
+            <div class="user-section">
+                <img id="profileImage" src="default-avatar.png" alt="Profile" class="profile-image">
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-cards">
+                <div class="action-card" data-action="join-course">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Join Course</h3>
+                    <p>Browse and enroll in new courses</p>
+                </div>
+                <div class="action-card" data-action="continue-learning">
+                    <i class="fas fa-book"></i>
+                    <h3>Continue Learning</h3>
+                    <p>Resume your current courses</p>
+                </div>
+                <div class="action-card" data-action="view-progress">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>View Progress</h3>
+                    <p>Track your learning journey</p>
+                </div>
+                <div class="action-card" data-action="earn-certificates">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Earn Certificates</h3>
+                    <p>Complete courses and get certified</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="analytics">
+            <h2>Your Progress</h2>
+            <div class="analytics-cards">
+                <div class="analytics-card" data-type="courses">
+                    <h3>Active Courses</h3>
+                    <p class="analytics-value">3</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="analytics-card" data-type="certificates">
+                    <h3>Certificates</h3>
+                    <p class="analytics-value">2</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="analytics-card" data-type="hours">
+                    <h3>Study Hours</h3>
+                    <p class="analytics-value">45</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul class="activity-list" id="activityList">
+                <!-- Activity items will be added dynamically -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 

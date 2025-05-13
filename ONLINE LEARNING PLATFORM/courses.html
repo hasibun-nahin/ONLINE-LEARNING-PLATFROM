@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Courses - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="courses-header">
+            <h1>Browse Courses</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search courses...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="courses-container">
+            <!-- Category Filters -->
+            <aside class="category-filters">
+                <h2>Categories</h2>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-category="all">All Courses</button>
+                    <button class="filter-btn" data-category="programming">Programming</button>
+                    <button class="filter-btn" data-category="design">Design</button>
+                    <button class="filter-btn" data-category="business">Business</button>
+                    <button class="filter-btn" data-category="marketing">Marketing</button>
+                </div>
+
+                <h2>Difficulty Level</h2>
+                <div class="filter-group">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="beginner"> Beginner
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="intermediate"> Intermediate
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="advanced"> Advanced
+                    </label>
+                </div>
+
+                <h2>Duration</h2>
+                <div class="filter-group">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="short"> < 5 hours
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="medium"> 5-10 hours
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="long"> > 10 hours
+                    </label>
+                </div>
+            </aside>
+
+            <!-- Course Gallery -->
+            <main class="course-gallery">
+                <div class="course-grid">
+                    <!-- Course cards will be dynamically added here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Course Preview Modal -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="preview-content">
+                <h2>Course Preview</h2>
+                <div class="preview-video">
+                    <video controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="preview-info">
+                    <h3 class="preview-title"></h3>
+                    <p class="preview-description"></p>
+                    <div class="preview-meta">
+                        <span class="preview-duration"></span>
+                        <span class="preview-level"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="courses.js"></script>
+</body>
+</html> 
